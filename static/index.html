@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://kit.fontawesome.com/c245b58451.js" crossorigin="anonymous"></script>
+
+  <link href="./main.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="backdrop"></div>
+
+  <div class="modal" id="modalMessage">
+    <h1 class="modal__title">Você está certo disso?</h1>
+    <div class="modal__body">Fazendo isso você está ciente de que isso será feito!</div>
+    <div class="modal__actions">
+      <button class="modal__action">Sim!</button>
+      <button class="modal__action modal__action-negative">Não</button>
+    </div>
+  </div>
+
+  <div class="modal" id="formSignUp">
+    <div class="form__login">
+      <h1 class="modal__title">Criar uma Conta...</h1>
+      <div class="modal__body">
+        <form action="#">
+          <div class="form__group">
+            <label>Nome</label>
+            <input class="form__control" type="text" id="username" placeholder="Digite seu Nome">
+          </div>
+          <div class="form__group">
+            <label>Iniciais</label>
+            <input class="form__control" type="text" id="username" placeholder="Digite suas Iniciais">
+          </div>
+          <div class="form__group">
+            <label>E-mail</label>
+            <input class="form__control" class="input-lg" type="email" id="email" placeholder="Digite seu E-Mail">
+          </div>
+          <div class="form__group">
+            <label>Senha</label>
+            <input class="form__control" type="password" id="password" placeholder="Digite sua Senha">
+          </div>
+          <div class="form__group">
+            <label>Confirmação</label>
+            <input class="form__control" type="password" id="passwordConfirm" placeholder="Confirme sua Senha">
+          </div>
+          <div class="form__group">
+            <label>Seu Avatar</label>
+            <div class="form__control__image-upload">
+              <input type="file" style="display: none;" accept=".jpg,.png,.jpeg,.svg" />
+              <div class="image-upload__preview">
+                <img src="images/avatar-05.png" />
+              </div>
+              <button type="button" class="btn btn-secondary">Buscar Imagem</button>
+            </div>
+          </div>
+          <div class="form__actions">
+            <button type="submit" class="btn btn-primary">Registrar</button>
+          </div>
+          <div class="form__actions">
+            <a href="#">Esqueci Minha Senha</a>
+            <a href="#">Tela de Login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="formSignIn">
+    <div class="form__login">
+      <h1 class="modal__title modal__title-primary">Login...</h1>
+      <div class="modal__body">
+        <form action="#">
+          <div class="form__group">
+            <label>E-mail</label>
+            <input class="form__control" class="input-lg" type="email" id="email" placeholder="Digite seu E-Mail">
+          </div>
+          <div class="form__group">
+            <label>Senha</label>
+            <input class="form__control" type="password" id="password" placeholder="Digite sua Senha">
+          </div>
+          <div class="form__actions">
+            <button type="submit" class="btn btn-primary">Entrar</button>
+          </div>
+          <div class="form__actions">
+            <a href="#">Esqueci Minha Senha</a>
+            <a href="#">Criar Conta</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div>
+      <button class="toggle-button">
+        <span class="toggle-button__bar"></span>
+        <span class="toggle-button__bar"></span>
+        <span class="toggle-button__bar"></span>
+      </button>
+      <a href="./index.html" class="brand">
+        <img src="./images/logo.svg" alt="BetApp - façam suas apostas">
+        BetApp
+      </a>
+    </div>
+    <nav class="top-nav">
+      <ul class="top-nav__items">
+        <li class="top-nav__item">
+          <a href="#" class="top-nav__link" id="groupMenu__activator">
+            <div class="badge__image">
+              <img src="./images/shield.svg" alt="My Group">
+            </div>
+            <span class="badge__label-lg">My Group</span>
+          </a>
+          <div class="top-nav__sub-menu" id="groupMenu">
+            <ul class="top-nav__sub-menu__items">
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <img src="./images/shield.svg">
+                  Meu Primeiro Grupo
+                </a>
+              </li>
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <img src="./images/shield2.svg">
+                  FIFAns Group
+                </a>
+              </li>
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <img src="./images/shield3.svg">
+                  Estrelas do Palpite
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="top-nav__item">
+          <a href="#" class="top-nav__link" id="leagueMenu__activator">
+            <div class="badge__image">
+              <img src="./images/league.png" alt="FIFA World Cup Brazil 2014">
+            </div>
+            <span class="badge__label-lg">FIFA WC BR 2014</span>
+          </a>
+          <div class="top-nav__sub-menu" id="leagueMenu">
+            <ul class="top-nav__sub-menu__items">
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <img src="./images/2022.png">
+                  FIFA World Cup Qatar 2022
+                </a>
+              </li>
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <img src="./images/2018.png">
+                  FIFA World Cup Russia 2018
+                </a>
+              </li>
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <img src="./images/2014.png">
+                  FIFA World Cup Brazil 2014
+                </a>
+              </li>
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <img src="./images/2010.png">
+                  FIFA World Cup South Africa 2010
+                </a>
+              </li>
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <img src="./images/2006.png">
+                  FIFA World Cup Germany 2006
+                </a>
+              </li>
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <img src="./images/2002.png">
+                  FIFA World Cup Japan / Korea 2002
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="top-nav__item">
+          <a href="#" class="top-nav__link dropdown dropdown-show" id="notificationMenu__activator">
+            <i class="fa fa-bell"></i>
+            <span class="top-nav__item__label">Notifications</span>
+            <span class="badge badge-warning">12</span>
+          </a>
+          <div class="top-nav__sub-menu" id="notificationMenu">
+            <ul class="top-nav__sub-menu__items">
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <h1>
+                    <i class="fa fa-flag-checkered icon-finish"></i>
+                    Brasil 3 x 0 Itália
+                  </h1>
+                  <p class="message__body">A partida foi encerrada e o resultado que você apostou foi exatamente o
+                    obtido!</p>
+                </a>
+                <p class="text-muted">12/06/2014 18:00</p>
+              </li>
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <h1>
+                    <i class="fa fa-bullhorn icon-start"></i>
+                    Brasil x Itália
+                  </h1>
+                  <p class="message__body">Partida iniciada!</p>
+                  <p class="text-muted">12/06/2014 16:00</p>
+                </a>
+              </li>
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link">
+                  <h1>
+                    <i class="fa fa-trophy icon-success"></i>
+                    Parabéns!
+                  </h1>
+                  <p class="message__body">Você assumiu a liderança do Ranking</p>
+                  <p class="text-muted">12/06/2014 14:25</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="top-nav__item">
+          <a href="#" class="top-nav__link" id="userMenu__activator">
+            <div class="profile__avatar">
+              <img src="./images/mario.png" alt="Mario">
+            </div>
+            <span class="badge__label">Antonio Nunes</span>
+          </a>
+          <div class="top-nav__sub-menu" id="userMenu">
+            <ul class="top-nav__sub-menu__items">
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link"><i class="fa fa-info icon-info"></i>Minhas Informações</a>
+              </li>
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link"><i class="fa fa-gears icon-config"></i>Configurações</a>
+              </li>
+              <li class="top-nav__sub-menu__item">
+                <a href="#" class="top-nav__sub-menu__link"><i class="fa fa-sign-out icon-logout"></i>Sair</a>
+              </li>
+              <li class="top-nav__sub-menu__item" id="menuSignIn">
+                <a href="#" class="top-nav__sub-menu__link"><i class="fa fa-sign-in icon-login"></i>Entrar</a>
+              </li>
+              <li class="top-nav__sub-menu__item" id="menuSignUp">
+                <a href="#" class="top-nav__sub-menu__link"><i class="fa fa-signature icon-login"></i>Registrar-se</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <aside>
+    <nav class="side-nav">
+      <ul class="side-nav__items">
+        <li class="side-nav__item">
+          <a href="#">
+            <i class="fa fa-chart-bar"></i>
+            <span>Painel</span>
+          </a>
+        </li>
+        <li class="side-nav__item">
+          <a href="#">
+            <i class="fa fa-handshake"></i>
+            <span>Meus Palpites</span>
+          </a>
+        </li>
+        <li class="side-nav__item">
+          <a href="#">
+            <i class="fa fa-bullhorn"></i>
+            <span>Resultados</span>
+          </a>
+        </li>
+        <li class="side-nav__item">
+          <a href="#">
+            <i class="fa fa-list-ol"></i>
+            <span>Ranking</span>
+          </a>
+        </li>
+        <li class="side-nav__item">
+          <a href="#">
+            <i class="fa fa-table"></i>
+            <span>Tabela de Jogos</span>
+          </a>
+        </li>
+        <li class="side-nav__item">
+          <a href="#">
+            <i class="fa fa-group"></i>
+            <span>Meus Grupos</span>
+          </a>
+        </li>
+        <li class="side-nav__item">
+          <a href="#">
+            <i class="fa fa-trophy"></i>
+            <span>Minhas Ligas</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+    <div class="main__background"></div>
+    <div class="container">
+      <div class="card card-event">
+        <div class="card card-event__stamp">
+          <img src="images/league.png" />
+        </div>
+        <div class="card__event-details">
+          <h1>
+            FIFA World Cup Brazil 2014
+          </h1>
+          <hr>
+          <dl>
+            <dt>Local: </dt>
+            <dd>Brasil </dd>
+            <dt>Per&iacute;odo: </dt>
+            <dd>de 14/06 a 15/07/2014</dd>
+            <dt>Status: </dt>
+            <dd>Em Andamento</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="card__hunches">
+        <h1>
+          Seus Palpites
+        </h1>
+        <hr>
+        <div class="card__hunches__container">
+          <div class="card__hunches__result-exact">
+            <h1>
+              Exatos
+            </h1>
+            <hr>
+            <div class="card__hunches__indicator">10</div>
+          </div>
+          <div class="card__hunches__result-right">
+            <h1>
+              Corretos
+            </h1>
+            <hr>
+            <div class="card__hunches__indicator">5</div>
+
+          </div>
+          <div class="card__hunches__result-wrong">
+            <h1>
+              Errados
+            </h1>
+            <hr>
+            <div class="card__hunches__indicator">12</div>
+
+          </div>
+        </div>
+      </div>
+      <div class="card__ranking">
+        <h1>
+          Ranking
+        </h1>
+        <hr>
+        <div class="ranking__container">
+          <div class="user__ranking">
+            <div class="ranking__header-sm">#</div>
+            <div class="ranking__header-sm span-2">Jogador</div>
+            <div class="ranking__header-sm ranking-list">Ac.</div>
+            <div class="ranking__header-sm ranking-list">Rs.</div>
+            <div class="ranking__header-sm ranking-list">Er.</div>
+            <div class="ranking__header-sm">Pts.</div>
+          </div>
+          <div class="user__ranking user__ranking-gold">
+            <div class="col center ranking__position"><i class="fa fa-medal gold"></i></div>
+            <div class="col center ranking__avatar">
+              <div class="center user__avatar" style="background-image: url('./images/avatar-04.png');"></div>
+            </div>
+            <div class="col left ranking__username">Doguinho</div>
+            <div class="col right ranking-list">4</div>
+            <div class="col right ranking-list">2</div>
+            <div class="col right ranking-list">5</div>
+            <div class="col right ranking__user-points">14</div>
+          </div>
+          <div class="user__ranking user__ranking-silver">
+            <div class="col center ranking__position"><i class="fa fa-medal silver"></i></div>
+            <div class="col center ranking__avatar">
+              <div class="center user__avatar" style="background-image: url('./images/avatar-01.png');"></div>
+            </div>
+            <div class="col left ranking__username">Mario</div>
+            <div class="col right ranking-list">4</div>
+            <div class="col right ranking-list">2</div>
+            <div class="col right ranking-list">5</div>
+            <div class="col right ranking__user-points">14</div>
+          </div>
+          <div class="user__ranking user__ranking-bronze">
+            <div class="col center ranking__position"><i class="fa fa-medal bronze"></i></div>
+            <div class="col center ranking__avatar">
+              <div class="center user__avatar" style="background-image: url('./images/avatar-02.png');"></div>
+            </div>
+            <div class="col left ranking__username">+1UP</div>
+            <div class="col right ranking-list">4</div>
+            <div class="col right ranking-list">2</div>
+            <div class="col right ranking-list">5</div>
+            <div class="col right ranking__user-points">14</div>
+          </div>
+          <div class="user__ranking user__ranking-self">
+            <div class="col center ranking__position">23º</div>
+            <div class="col center ranking__avatar">
+              <div class="center user__avatar" style="background-image: url('./images/avatar-03.png');"></div>
+            </div>
+            <div class="col left ranking__username">Zeldo</div>
+            <div class="col right ranking-list">4</div>
+            <div class="col right ranking-list">2</div>
+            <div class="col right ranking-list">5</div>
+            <div class="col right ranking__user-points">14</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card__groups">
+        <h1>
+          Classificação - Grupo A
+        </h1>
+        <hr>
+        <div class="table__container">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th></th>
+                <th>J</th>
+                <th>P</th>
+                <th>V</th>
+                <th>E</th>
+                <th>D</th>
+                <th>SG</th>
+                <th>GP</th>
+                <th>GC</th>
+                <th>CV</th>
+                <th>CA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-odd">
+                <th class="col">1</th>
+                <td class="col-3">
+                  <div class="list__team-label-left"
+                    style="background-image: linear-gradient(to left, green, transparent)">
+                    <span class="team__label">Brasil</span>
+                    <span class="team__label-sm">BRA</span>
+                    <div class="team__logo" style="background-image: url('./images/bra.png');"></div>
+                  </div>
+                </td>
+                <td class="col">3</td>
+                <td class="col main-col">7</td>
+                <td class="col">2</td>
+                <td class="col">1</td>
+                <td class="col">0</td>
+                <td class="col">6</td>
+                <td class="col">8</td>
+                <td class="col">2</td>
+                <td class="col">1</td>
+                <td class="col">5</td>
+              </tr>
+              <tr class="row-even">
+                <th>2</th>
+                <td>
+                  <div class="list__team-label-left"
+                    style="background-image: linear-gradient(to left, red, transparent)">
+                    <span class="team__label">Espanha</span>
+                    <span class="team__label-sm">ESP</span>
+                    <div class="team__logo" style="background-image: url('./images/esp.png');"></div>
+                  </div>
+                </td>
+                <td>3</td>
+                <td class="main-col">7</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                <td>6</td>
+                <td>8</td>
+                <td>2</td>
+                <td>1</td>
+                <td>5</td>
+              </tr>
+              <tr class="row-odd">
+                <th>3</th>
+                <td>
+                  <div class="list__team-label-left"
+                    style="background-image: linear-gradient(to left, #99ccff, transparent)">
+                    <span class="team__label">Argentina</span>
+                    <span class="team__label-sm">ARG</span>
+                    <div class="team__logo" style="background-image: url('./images/arg.png');"></div>
+                  </div>
+                </td>
+                <td>3</td>
+                <td class="main-col">7</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                <td>6</td>
+                <td>8</td>
+                <td>2</td>
+                <td>1</td>
+                <td>5</td>
+              </tr>
+              <tr class="row-even">
+                <th>4</th>
+                <td>
+                  <div class="list__team-label-left"
+                    style="background-image: linear-gradient(to left, red, transparent)">
+                    <span class="team__label">Alemanha</span>
+                    <span class="team__label-sm">ALE</span>
+                    <div class="team__logo" style="background-image: url('./images/deu.png');"></div>
+                  </div>
+                </td>
+                <td>3</td>
+                <td class="main-col">7</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                <td>6</td>
+                <td>8</td>
+                <td>2</td>
+                <td>1</td>
+                <td>5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card__matches">
+        <h1>
+          Próximos Jogos
+        </h1>
+        <hr>
+        <div class="matches__container">
+          <div class="match">
+            <div class="match__info">
+              <span>Fase 1 - Grupo A - Rodada 3</span>
+              <span>15/06/2014 16h00</span>
+            </div>
+            <div class="match__frame"> &times; </div>
+            <div class="match__home">
+              <span class="team__label" style="background-image: linear-gradient(to left, green, transparent);">
+                <span class="team__label-lg">Brasil</span>
+                <span class="team__label-sm">BRA</span>
+                <div class="team__logo" style="background-image: url('./images/bra.png');"></div>
+              </span>
+              <div class="score__home">
+                <input type="text">
+              </div>
+            </div>
+            <div class="match__away">
+              <div class="score__away">
+                <input type="text">
+              </div>
+              <span class="team__label" style="background-image: linear-gradient(to right, red, transparent);">
+                <div class="team__logo" style="background-image: url('./images/ita.png');"></div>
+                <span class="team__label-lg">Itália</span>
+                <span class="team__label-sm">ITA</span>
+              </span>
+            </div>
+            <div class="match__location">
+              Maracanã - RJ
+            </div>
+          </div>
+          <div class="match">
+            <div class="match__info">
+              <span>Fase 1 - Grupo B - Rodada 3</span>
+              <span>15/06/2014 16h00</span>
+            </div>
+            <div class="match__frame"> &times; </div>
+            <div class="match__home">
+              <span class="team__label" style="background-image: linear-gradient(to left, #99ccff, transparent);">
+                <span class="team__label-lg">Argentina</span>
+                <span class="team__label-sm">ARG</span>
+                <div class="team__logo" style="background-image: url('./images/arg.png');"></div>
+              </span>
+              <div class="score__home">
+                <input type="text">
+              </div>
+            </div>
+            <div class="match__away">
+              <div class="score__away">
+                <input type="text">
+              </div>
+              <span class="team__label" style="background-image: linear-gradient(to right, red, transparent);">
+                <div class="team__logo" style="background-image: url('./images/esp.png');"></div>
+                <span class="team__label-lg">Espanha</span>
+                <span class="team__label-sm">ESP</span>
+              </span>
+            </div>
+            <div class="match__location">
+              Estádio Beira Rio - RS
+            </div>
+          </div>
+          <div class="match">
+            <div class="match__info">
+              <span>Fase 1 - Grupo C - Rodada 3</span>
+              <span>15/06/2014 16h00</span>
+            </div>
+            <div class="match__frame"> &times; </div>
+            <div class="match__home">
+              <span class="team__label" style="background-image: linear-gradient(to left, red, transparent);">
+                <span class="team__label-lg">Alemanha</span>
+                <span class="team__label-sm">ALE</span>
+                <div class="team__logo" style="background-image: url('./images/deu.png');"></div>
+              </span>
+              <div class="score__home">
+                <input type="text">
+              </div>
+            </div>
+            <div class="match__away">
+              <div class="score__away">
+                <input type="text">
+              </div>
+              <span class="team__label" style="background-image: linear-gradient(to right, red, transparent);">
+                <div class="team__logo" style="background-image: url('./images/fra.png');"></div>
+                <span class="team__label-lg">França</span>
+                <span class="team__label-sm">FRA</span>
+              </span>
+            </div>
+            <div class="match__location">
+              Arena de São Paulo - SP
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card__results">
+        <h1>
+          Resultados Recentes
+        </h1>
+        <hr>
+        <div class="results__container">
+          <div class="result">
+            <div class="match__info result__match-started">
+              <span>Fase 1 - Grupo A - Rodada 3</span>
+              <span>15/06/2014 16h00</span>
+            </div>
+            <div class="result__points result__points-exact">
+              <span>3 Pontos</span>
+            </div>
+            <div class="result__frame"> &times; </div>
+            <div class="result__home">
+              <span class="team__label" style="background-image: linear-gradient(to left, green, transparent);">
+                <span class="team__label-lg">Brasil</span>
+                <span class="team__label-sm">BRA</span>
+                <div class="team__logo" style="background-image: url('./images/bra.png');"></div>
+              </span>
+              <div class="result__score">
+                <span class="estimated">1</span>
+                <span class="obtained">1</span>
+              </div>
+            </div>
+            <div class="result__away">
+              <div class="result__score">
+                <span class="obtained">2</span>
+                <span class="estimated">1</span>
+              </div>
+              <span class="team__label" style="background-image: linear-gradient(to right, red, transparent);">
+                <div class="team__logo" style="background-image: url('./images/ita.png');"></div>
+                <span class="team__label-lg">Itália</span>
+                <span class="team__label-sm">ITA</span>
+              </span>
+            </div>
+            <div class="match__location">
+              Maracanã - RJ
+            </div>
+          </div>
+
+          <div class="result">
+            <div class="match__info result__match-started">
+              <span>Fase 1 - Grupo A - Rodada 3</span>
+              <span>15/06/2014 16h00</span>
+            </div>
+            <div class="result__points result__points-right">
+              <span>1 Ponto</span>
+            </div>
+            <div class="result__frame"> &times; </div>
+            <div class="result__home">
+              <span class="team__label" style="background-image: linear-gradient(to left, #99ccff, transparent);">
+                <span class="team__label-lg">Argentina</span>
+                <span class="team__label-sm">ARG</span>
+                <div class="team__logo" style="background-image: url('./images/arg.png');"></div>
+              </span>
+              <div class="result__score">
+                <span class="estimated">1</span>
+                <span class="obtained">2</span>
+              </div>
+            </div>
+            <div class="result__away">
+              <div class="result__score">
+                <span class="obtained">2</span>
+                <span class="estimated">1</span>
+              </div>
+              <span class="team__label" style="background-image: linear-gradient(to right, red, transparent);">
+                <div class="team__logo" style="background-image: url('./images/esp.png');"></div>
+                <span class="team__label-lg">Espanha</span>
+                <span class="team__label-sm">ESP</span>
+              </span>
+            </div>
+            <div class="match__location">
+              Estádio Beira Rio - RS
+            </div>
+          </div>
+
+          <div class="result">
+            <div class="match__info result__match-finished">
+              <span>Fase 1 - Grupo A - Rodada 3</span>
+              <span>15/06/2014 16h00</span>
+            </div>
+            <div class="result__points result__points-wrong">
+              <span>0 Ponto</span>
+            </div>
+            <div class="result__frame"> &times; </div>
+            <div class="result__home">
+              <span class="team__label" style="background-image: linear-gradient(to left, red, transparent);">
+                <span class="team__label-lg">Alemanha</span>
+                <span class="team__label-sm">ALE</span>
+                <div class="team__logo" style="background-image: url('./images/deu.png');"></div>
+              </span>
+              <div class="result__score">
+                <span class="estimated">3</span>
+                <span class="obtained">2</span>
+              </div>
+            </div>
+            <div class="result__away">
+              <div class="result__score">
+                <span class="obtained">3</span>
+                <span class="estimated">0</span>
+              </div>
+              <span class="team__label" style="background-image: linear-gradient(to right, red, transparent);">
+                <div class="team__logo" style="background-image: url('./images/fra.png');"></div>
+                <span class="team__label-lg">França</span>
+                <span class="team__label-sm">FRA</span>
+              </span>
+            </div>
+            <div class="match__location">
+              Arena de São Paulo - SP
+            </div>
+          </div>
+
+          <div class="result">
+            <div class="match__info result__match-finished">
+              <span>Fase 1 - Grupo A - Rodada 3</span>
+              <span>15/06/2014 16h00</span>
+            </div>
+            <div class="result__points result__points-right">
+              <span>3 Pontos</span>
+            </div>
+            <div class="result__frame"> &times; </div>
+            <div class="result__home">
+              <span class="team__label" style="background-image: linear-gradient(to left, green, transparent);">
+                <span class="team__label-lg">Brasil</span>
+                <span class="team__label-sm">BRA</span>
+                <div class="team__logo" style="background-image: url('./images/bra.png');"></div>
+              </span>
+              <div class="result__score">
+                <span class="estimated">1</span>
+                <span class="obtained">1<span class="penalties">5</span></span>
+              </div>
+            </div>
+            <div class="result__away">
+              <div class="result__score">
+                <span class="obtained">1<span class="penalties">4</span></span>
+                <span class="estimated">1</span>
+              </div>
+              <span class="team__label" style="background-image: linear-gradient(to right, darkblue, transparent);">
+                <div class="team__logo" style="background-image: url('./images/fra.png');"></div>
+                <span class="team__label-lg">França</span>
+                <span class="team__label-sm">FRA</span>
+              </span>
+            </div>
+            <div class="match__location">
+              Mineirão - MG
+            </div>
+          </div>
+
+          <div class="result">
+            <div class="match__info result__match-future">
+              <span>Fase 1 - Grupo A - Rodada 3</span>
+              <span>15/06/2014 16h00</span>
+            </div>
+            <div class="result__points result__points-future">
+              <span>?</span>
+            </div>
+            <div class="result__frame"> &times; </div>
+            <div class="result__home">
+              <span class="team__label" style="background-image: linear-gradient(to left, green, transparent);">
+                <span class="team__label-lg">Brasil</span>
+                <span class="team__label-sm">BRA</span>
+                <div class="team__logo" style="background-image: url('./images/bra.png');"></div>
+              </span>
+              <div class="result__score">
+                <span class="estimated">1</span>
+                <span class="obtained">?</span>
+              </div>
+            </div>
+            <div class="result__away">
+              <div class="result__score">
+                <span class="obtained">?</span>
+                <span class="estimated">1</span>
+              </div>
+              <span class="team__label" style="background-image: linear-gradient(to right, red, transparent);">
+                <div class="team__logo" style="background-image: url('./images/deu.png');"></div>
+                <span class="team__label-lg">Alemanha</span>
+                <span class="team__label-sm">ALE</span>
+              </span>
+            </div>
+            <div class="match__location">
+              Maracanã - RJ
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card__matches__all">
+        <h1>
+          Todos os Jogos
+        </h1>
+        <hr>
+        <div class="table__container">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th><span class="table__header-sm">F</span><span class="table__header">F</span><span
+                    class="table__header-lg">Fase</span></th>
+                <th><span class="table__header-sm">R</span><span class="table__header">R</span><span
+                    class="table__header-lg">Rodada</span></th>
+                <th colspan="2"><span class="table__header-sm">Man.</span><span
+                    class="table__header">Mandante</span><span class="table__header-lg">Mandante</span></th>
+                <th colspan="2"><span class="table__header-sm">Vis.</span><span
+                    class="table__header">Visitante</span><span class="table__header-lg">Visitante</span></th>
+                <th><span class="table__header-sm">S</span><span class="table__header">St</span><span
+                    class="table__header-lg">Status</span></th>
+                <th><span class="table__header-sm">P</span><span class="table__header">Pts</span><span
+                    class="table__header-lg">Pontos</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-odd">
+                <th>1</th>
+                <td>1ª</td>
+                <td>2ª</td>
+                <td>
+                  <div class="team__home">
+                    <div class="list__team-label-left"
+                      style="background-image: linear-gradient(to left, green, transparent)">
+                      <span class="team__label">Brasil</span>
+                      <span class="team__label-sm">BRA</span>
+                      <div class="team__logo" style="background-image: url('./images/bra.png');"></div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="list__score">2</span>
+                  <!-- <span class="penalties">2</span> -->
+                </td>
+                <td>
+                  <!-- <span class="penalties">2</span> -->
+                  <span class="list__score">2</span>
+                </td>
+                <td>
+                  <div class="team__away">
+                    <div class="list__team-label-right"
+                      style="background-image: linear-gradient(to right, red, transparent)">
+                      <span class="team__label">Alemanha</span>
+                      <span class="team__label-sm">ALE</span>
+                      <div class="team__logo" style="background-image: url('./images/deu.png');"></div>
+                    </div>
+                  </div>
+                </td>
+                <td><i class="fa fa-hourglass-o match-ended-sm"></i><span class="match-ended">Encerrado</span></td>
+                <td><span class="list__result-exact">3</span></td>
+              </tr>
+              <tr class="row-even">
+                <th>1</th>
+                <td>1ª</td>
+                <td>2ª</td>
+                <td>
+                  <div class="team__home">
+                    <div class="list__team-label-left"
+                      style="background-image: linear-gradient(to left, green, transparent)">
+                      <span class="team__label">Itália</span>
+                      <span class="team__label-sm">ITA</span>
+                      <div class="team__logo" style="background-image: url('./images/ita.png');"></div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="list__score">2</span>
+                  <span class="list__penalties">2</span>
+                </td>
+                <td>
+                  <span class="list__penalties">2</span>
+                  <span class="list__score">2</span>
+                </td>
+                <td>
+                  <div class="team__away">
+                    <div class="list__team-label-right"
+                      style="background-image: linear-gradient(to right, darkblue, transparent)">
+                      <span class="team__label">França</span>
+                      <span class="team__label-sm">FRA</span>
+                      <div class="team__logo" style="background-image: url('./images/fra.png');"></div>
+                    </div>
+                  </div>
+                </td>
+                <td><i class="fa fa-hourglass-half match-started-sm"></i><span class="match-started">Em Andamento</span>
+                </td>
+                <td><span class="list__result-right">1</span></td>
+              </tr>
+              <tr class="row-odd">
+                <th>1</th>
+                <td>1ª</td>
+                <td>2ª</td>
+                <td>
+                  <div class="team__home">
+                    <div class="list__team-label-left"
+                      style="background-image: linear-gradient(to left, red, transparent)">
+                      <span class="team__label">Espanha</span>
+                      <span class="team__label-sm">ESP</span>
+                      <div class="team__logo" style="background-image: url('./images/esp.png');"></div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="list__score">2</span>
+                  <span class="list__penalties">2</span>
+                </td>
+                <td>
+                  <span class="list__penalties">2</span>
+                  <span class="list__score">2</span>
+                </td>
+                <td>
+                  <div class="team__away">
+                    <div class="list__team-label-right"
+                      style="background-image: linear-gradient(to right, #99ccff, transparent)">
+                      <span class="team__label">Argentina</span>
+                      <span class="team__label-sm">ARG</span>
+                      <div class="team__logo" style="background-image: url('./images/arg.png');"></div>
+                    </div>
+                  </div>
+                </td>
+                <td><i class="fa fa-clock match-future-sm"></i><span class="match-future">Não Iniciado</span></td>
+                <td><span class="list__result-wrong">0</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>Footer</footer>
+
+  <script src="./shared/js/shared.js" type="text/javascript"></script>
+</body>
+
+</html>

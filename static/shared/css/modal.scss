@@ -1,0 +1,329 @@
+.modal {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: opacity 0.2s ease-out, transform 500ms ease-out;
+  z-index: 200;
+  background: white;
+  padding: 0;
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#formSignUp {
+  width: 80vw;
+  height: 43.5rem;
+  max-height: 80vh;
+  margin: 10vh 10vw 10vh 10vw;
+
+  @media(min-width: 40rem) {
+    width: 70vw;
+    margin: 10vh 15vw 10vh 15vw;
+  }
+
+  @media(min-width: 60rem) {
+    width: 50vw;
+    margin: 10vh 25vw 10vh 25vw;
+  }
+
+  @media(min-width: 90rem) {
+    width: 30vw;
+    margin: 10vh 35vw 10vh 35vw;
+  }
+
+}
+
+#formSignIn {
+  width: 80vw;
+  height: 18rem;
+  max-height: 50vh;
+  margin: 25vh 10vw 25vh 10vw;
+  
+  @media(min-width: 40rem) {
+    width: 70vw;
+    margin: 25vh 15vw 25vh 15vw;
+  }
+
+  @media(min-width: 60rem) {
+    width: 50vw;
+    margin: 25vh 25vw 25vh 25vw;
+  }
+
+  @media(min-width: 90rem) {
+    width: 30vw;
+    margin: 25vh 35vw 25vh 35vw;
+  }
+
+}
+
+.form__login {
+  height: 100%;
+
+  form {
+    //background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .form__group {
+    margin: 0.2rem 0;
+    @media(min-width: 40rem){
+      margin: 0.4rem 0;
+    }
+  }
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.modal__title {
+  margin: 0;
+  text-align: left;
+  background-color: $base-color;
+  color: $base-text-color;
+  padding: 0.8rem 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  z-index: 1;
+}
+
+.modal__body {
+  margin: 0.5rem;
+  //padding: 0.5rem 0;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  height: calc(100% - 4rem);
+  width: auto;
+  //background-color: purple;
+}
+
+.modal__title-primary {
+  background-color: $primary-color;
+}
+
+.modal__title-secondary {
+  background-color: $secondary-color;
+}
+
+.modal__title-warning {
+  background-color: $warning-color;
+}
+
+.modal__title-success {
+  background-color: $success-color;
+}
+
+.modal__title-danger {
+  background-color: $danger-color;
+}
+
+
+
+.form__actions {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2rem;
+  @media (min-width: 40rem) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  a, a:visited {
+    color: $secondary-color;
+    text-align: center;
+    font-size: 0.7rem;
+    text-decoration: none;
+    display: block;
+    
+    &:hover, 
+    &:active {
+      font-weight: bold;
+    }
+  }
+}
+
+.form__control {
+  border: 1px solid lighten($color: $base-color, $amount: 50%);
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+  height: 2rem;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+}
+
+input.form__control, select.form__control, textarea.form__control {
+  @extend .form__control;
+  &:focus,
+  &:active {
+    background-color: transparentize($color: $highlight-color, $amount: 0.5);
+    border: 1px solid lighten($color: $base-color, $amount: 25%);
+  }
+}
+
+.form__control__image-upload {
+  @extend .form__control;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .image-upload__preview {
+    width: 8rem;
+    height: 8rem;
+    text-align: center;
+    margin: 0.2rem 0;
+    img {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+}
+
+.btn {
+  height: 2rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.3rem;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: $primary-text-color;
+
+  &:hover {
+    background-color: $primary-hover-color;
+    border-color: $primary-hover-color;
+    color: $primary-hover-text-color;
+  }
+
+  &:active {
+    background-color: $primary-active-color;
+    border-color: $primary-active-border-color;
+    color: $primary-active-text-color;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  color: $secondary-text-color;
+
+  &:hover {
+    background-color: $secondary-hover-color;
+    border-color: $secondary-hover-color;
+    color: $secondary-hover-text-color;
+  }
+
+  &:active {
+    background-color: $secondary-active-color;
+    border-color: $secondary-active-border-color;
+    color: $secondary-active-text-color;
+  }
+}
+
+.btn-warning {
+  background-color: $warning-color;
+  border-color: $warning-color;
+  color: $warning-text-color;
+
+  &:hover {
+    background-color: $warning-hover-color;
+    border-color: $warning-hover-color;
+    color: $warning-hover-text-color;
+  }
+
+  &:active {
+    background-color: $warning-active-color;
+    border-color: $warning-active-border-color;
+    color: $warning-active-text-color;
+  }
+}
+
+.btn-success {
+  background-color: $success-color;
+  border-color: $success-color;
+  color: $success-text-color;
+
+  &:hover {
+    background-color: $success-hover-color;
+    border-color: $success-hover-color;
+    color: $success-hover-text-color;
+  }
+
+  &:active {
+    background-color: $success-active-color;
+    border-color: $success-active-border-color;
+    color: $success-active-text-color;
+  }
+}
+
+.btn-danger {
+  background-color: $danger-color;
+  border-color: $danger-color;
+  color: $danger-text-color;
+
+  &:hover {
+    background-color: $danger-hover-color;
+    border-color: $danger-hover-color;
+    color: $danger-hover-text-color;
+  }
+
+  &:active {
+    background-color: $danger-active-color;
+    border-color: $danger-active-border-color;
+    color: $danger-active-text-color;
+  }
+}
+
+.modal__actions {
+  text-align: center;
+}
+
+.modal__action {
+  border: 1px solid #0e4f1f;
+  background: #0e4f1f;
+  text-decoration: none;
+  color: white;
+  font: inherit;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+  background: #2ddf5c;
+  border-color: #2ddf5c;
+}
+
+.modal__action-negative {
+  background: red;
+  border-color: red;
+}
+
+.modal__action-negative:hover,
+.modal__action-negative:active {
+  background: #ff5454;
+  border-color: #ff5454;
+}
+
+.open {
+  display: block !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
